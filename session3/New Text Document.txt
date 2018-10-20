@@ -1,0 +1,15 @@
+How to check variable's type ?
+print(type(variable))
+In what cases, you will get SyntaxError from the compiler telling you that some of your variables have invalid names? Can you give 3 different examples of invalid names?
++ The assignment token, =, should not be confused with equals, which uses the token ==. The assignment statement binds a name, on the left-hand side of the operator, to a value, on the
+right-hand side. This is why you will get an error if you enter 
++ There are some situations in which names beginning with an underscore have special meaning,
+so a safe rule for beginners is to start all names with a letter.
+Example:
+1. >>> 17 = n
+File "<interactive input>", line 1
+SyntaxError: can’t assign to literal
+2. >>> 76trombones = "big parade"
+SyntaxError: invalid syntax
+3. >>> more$ = 1000000
+SyntaxError: invalid syntax
