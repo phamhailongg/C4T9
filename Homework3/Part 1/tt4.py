@@ -1,8 +1,8 @@
-# vẽ nhà 
+# draw house
 from turtle import *  
 from math import *
 speed(10)
-penup() # turtle appear
+penup() # turtle disappear
 rt(90)
 fd(300)
 lt(90)
