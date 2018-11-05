@@ -4,16 +4,16 @@ print("Current list: ", l)
 
 while True :
     choice = input("C to create new things, R to read elements, U to update new things, D to delete things. I will choose: ")
-    while choice not in ['C','R','U','D']:
+    while choice not in ['c','r','u','d']:
         choice = input("Invalid choice! Retry: ")
-    if choice == "C" : 
+    if choice == "c" : 
         n1 = input("Which one do you wanna add? ")
         l.append(n1)
         print("You now get a new list: ", l)
-    elif choice == "R" :
+    elif choice == "r" :
         for n, things in enumerate(l) : 
              print(n + 1, ". ", things, sep="")      
-    elif choice == "U" :
+    elif choice == "u" :
         p1 = int(input("Which position you wanna change? "))
         while p1 > len(l) - 1 : 
             p1 = int(input("Invalid position! Try again! ")) 
