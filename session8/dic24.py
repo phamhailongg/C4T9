@@ -30,5 +30,9 @@ salary = [
     "Salary per Hour($)" : 0.7 ,
     }
 ]
-for i in range(len(salary)) :
-    print(salary[i]["Hours"])
+
+tol_sal = 0
+for i in salary : 
+    sal = round ( i["Hours"] * i["Salary per Hour($)"] ) * 30
+    tol_sal += sal
+print("The total money company must pay is", tol_sal, "dollars")

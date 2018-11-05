@@ -1,4 +1,4 @@
-# pokedex
+# pokedex more advanced
 poke = {
     "raichu" : ''' Raichu has a regional variant that is Electric/Psychic.
  It evolves from Pikachu when exposed to a Thunder Stone.
@@ -16,5 +16,20 @@ poke = {
     "metapod" : ''' The shell covering this Pokémon's body is as hard as an iron slab.
  Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.'''
 }
-search = input("Which pokemon do you want to search? ")
-print(poke[search])
+search = input("Which pokemon do you want to look up to? ")
+while True :  
+    if search not in poke : 
+        search = input("Do not find your pokemon? Do you want to add it to the dictionary? ")
+        if search == "yes" : 
+            n = input("Pokemon's name: ")
+            i = input("Pokemon's introduction: ")
+            poke[n] = i
+            print("Thank you! Your new pokemon is added")  
+        elif search == "no" :
+            print("No add, no dictionary!")
+            break
+    else : 
+        search = input("Retype to prove you are not a robot! Your pokemon:  ")
+        search = search.lower()
+        print(poke[search]) 
+        

@@ -30,5 +30,7 @@ salary = [
     "Salary per Hour($)" : 0.7 ,
     }
 ]
-for i in range(len(salary)) :
-    print(salary[i]["Hours"])
+
+for i in salary : 
+    sal = round ( i["Hours"] * i["Salary per Hour($)"] ) * 30
+    print(i["Name"], "earns", "$", sal, "per month")

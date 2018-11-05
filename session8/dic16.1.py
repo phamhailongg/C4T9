@@ -16,5 +16,12 @@ poke = {
     "metapod" : ''' The shell covering this Pokémon's body is as hard as an iron slab.
  Metapod does not move very much. It stays still because it is preparing its soft innards for evolution inside the hard shell.'''
 }
-search = input("Which pokemon do you want to search? ")
-print(poke[search])
+
+search = input("Which pokemon do you want to look up to? ")
+
+while search in poke :  
+    search = input("Which pokemon do you want to look up to? ")
+    search = search.lower()
+    print(poke[search])
+  
+    

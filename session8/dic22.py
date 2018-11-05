@@ -16,17 +16,20 @@ salary = [
     "Role" : "Manager" ,
     "Hours" : 20 ,
     "Salary per Hour($)" : 2 ,
+    },
+
+    {"Name" : "Don" ,
+    "Role" : "Waiter" ,
+    "Hours" : 12 ,
+    "Salary per Hour($)" : 0.8 ,
+    },
+
+    {"Name" : "H.Duc" ,
+    "Role" : "Waiter" ,
+    "Hours" : 14 , 
+    "Salary per Hour($)" : 0.7 ,
     }
 ]
 
-salary.append({"Name" : "Don" ,
-"Role" : "Waiter" ,
-"Hours" : 12 ,
-"Salary per Hour($)" : 0.8 ,
-}) 
-salary.append({"Name" : "H.Duc" ,
-"Role" : "Waiter" ,
-"Hours" : 14 , 
-"Salary per Hour($)" : 0.7 ,
-})
-print(salary)
+for i in salary : 
+    print(i)
