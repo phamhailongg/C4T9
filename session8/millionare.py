@@ -142,6 +142,7 @@ while c in ["1", "2"] :
                 level += 1
                 ls = 0
                 Qused = []  
+            print("____________________________________________")
         print("Final score: ", point)
         if point not in scores : 
             scores.append(point)
