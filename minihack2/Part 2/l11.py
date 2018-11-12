@@ -1,6 +1,7 @@
 # make a list 
 n = input("Enter a list of numbers, separated by ‘, ‘ : ")
-n = n.split(', ')
+n = n.split(',')
+print(n)
 ln1 = []
 for i in n : 
     i = int(i)
