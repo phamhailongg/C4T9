@@ -44,9 +44,10 @@ for i in range(len(s)) :
         print(key, ":", s[i][key])
 print('_______________________')
 print('')
-
+print("Boss is coming ! Let's fight !")
 # combat
 while True : 
+    
     b = input("Choose skill: ")
     while int(b) not in [1, 2, 3] : 
         b = input("Wrong key! Try again: ")
