@@ -11,7 +11,7 @@ window_width = 1000
 window_height = 600
 
 gameDisplay = pygame.display.set_mode((window_width, window_height))
-pygame.display.set_caption('slither')
+pygame.display.set_caption('Snake Xenzia')
 
 clock = pygame.time.Clock()
 FPS = 30
@@ -22,7 +22,7 @@ font = pygame.font.SysFont(None, 25, bold = True)
 
 def snake(blockSize, snakelist):
     for size in snakelist:
-        pygame.draw.rect(gameDisplay, black,[size[0], size[1], blockSize, blockSize])
+        pygame.draw.rect(gameDisplay, red,[size[0], size[1], blockSize, blockSize])
 
 def message_to_screen(msg, color):
     screen_text = font.render(msg, True, color)
@@ -32,8 +32,8 @@ def gameLoop():
     gameExit = False
     gameOver = False
 
-    lead_x = window_width/2
-    lead_y = window_height/2
+    lead_x = window_width / 2
+    lead_y = window_height / 2
 
     change_pixels_of_x = 0
     change_pixels_of_y = 0
@@ -41,33 +41,33 @@ def gameLoop():
     snakelist = []
     snakeLength = 1
 
-    randomAppleX = round(random.randrange(0, window_width-blockSize)/10.0)*10.0
-    randomAppleY = round(random.randrange(0, window_height-blockSize)/10.0)*10.0
+    randomAppleX = round(random.randrange(0, window_width-blockSize) / 10.0) * 10.0
+    randomAppleY = round(random.randrange(0, window_height-blockSize) / 10.0) * 10.0
     
     while not gameExit:
         
         while gameOver == True:
-            gameDisplay.fill(white)
-            message_to_screen("Game over, press c to play again or Q to quit", red)
+            gameDisplay.fill(black)
+            message_to_screen("Game over, press Space to play again or Q to quit", red)
             pygame.display.update()
 
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
+            for event in pygame.event.get() :
+                if event.type == pygame.QUIT :
                     gameOver = False
                     gameExit = True
                     
-                if event.type == pygame.KEYDOWN:
+                if event.type == pygame.KEYDOWN :
                     if event.key == pygame.K_q:
                         gameExit = True
                         gameOver = False
-                    if event.key == pygame.K_c:
+                    if event.key == pygame.K_SPACE :
                         gameLoop()
             
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+        for event in pygame.event.get() :
+            if event.type == pygame.QUIT :
                 gameExit = True
 
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN :
 
                 leftArrow = event.key == pygame.K_LEFT
                 rightArrow = event.key == pygame.K_RIGHT
@@ -93,10 +93,10 @@ def gameLoop():
         lead_x += change_pixels_of_x
         lead_y += change_pixels_of_y
         
-        gameDisplay.fill(white)
+        gameDisplay.fill(black)
 
         AppleThickness = 10
-        pygame.draw.rect(gameDisplay, red, [randomAppleX,randomAppleY,AppleThickness,AppleThickness])
+        pygame.draw.rect(gameDisplay, red, [randomAppleX, randomAppleY, AppleThickness, AppleThickness])
 
         snakehead = []
         snakehead.append(lead_x)
@@ -106,7 +106,7 @@ def gameLoop():
         if len(snakelist) > snakeLength:
             del snakelist[0]
             
-        for eachSegment in snakelist [:-1]:
+        for eachSegment in snakelist [:-1] :
             if eachSegment == snakehead:
                 gameOver = True
                 
