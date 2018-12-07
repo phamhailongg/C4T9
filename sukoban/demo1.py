@@ -50,4 +50,4 @@ while True:
     for i in m :
         for c in i :
             print(c, end = " ")
-            print()
+        print()
